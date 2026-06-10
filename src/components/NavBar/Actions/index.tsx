@@ -9,9 +9,10 @@ const Actions = () => {
     
     return(
         <div className='Actions'>
-            <img src={settings} alt="" />
-            <img src={camera} alt="" />
-            <img src={message} alt="" />
+            
+            <button><img src={settings} alt="" /></button>
+            <button><img src={camera} alt="" /></button>
+            <button><img src={message} alt="" /></button>            
             <button><p>New Post</p></button>
         </div>
     )
