@@ -1,5 +1,6 @@
 import './App.css'
 import NavBar from "./components/NavBar"
+import PostsArray from './components/Home/PostsArray'
 
 function App() {
 
@@ -7,6 +8,8 @@ function App() {
     <div>
 
         <NavBar />
+
+        <PostsArray />
 
     </div>
   )
