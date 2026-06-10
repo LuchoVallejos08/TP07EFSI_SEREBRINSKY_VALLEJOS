@@ -1,6 +1,4 @@
-interface PostPictureProps {
-    url: string
-}
+import type { PostPictureProps } from "../../../../../types/PostPictureProps"
 
 const PostPicture = ({ url }: PostPictureProps) => {
 

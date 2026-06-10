@@ -1,4 +1,4 @@
-import type { PostInfoProps } from "../../../../../types/PostInfoProps"
+import type { PostInfoProps } from "../../../../../../types/PostInfoProps"
 
 const PostInfo = ({ breed }: PostInfoProps) => {
 

@@ -1,6 +1,7 @@
 // Post/Post.tsx — ya no fetchea, solo distribuye
 import PostPicture from "./PostPicture"
-import PostInfo from "./PostInfo"
+import PostHeader from "./PostHeader"
+import PostFooter from "./PostFooter"
 import type { CatPost } from "../../../../types/CatPost"
 
 type PostProps = {
@@ -11,9 +12,10 @@ const Post = ({ post }: PostProps) => {
 
     return (
         <div className="Post">
+            <PostHeader />
             <PostPicture url={post.url} />
-            <PostInfo breed={post.breeds[0]} />
-        </div>
+            <PostFooter breed={post.breeds[0]} />        
+            </div>
     )
 }
 

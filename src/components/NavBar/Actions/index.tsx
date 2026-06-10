@@ -1,6 +1,6 @@
 import settings from '../../../assets/material-symbols--settings.png'
 import camera from '../../../assets/mdi--camera.png'
-import message from '../../../assets/uil--message.png'
+import message from '../../../assets/Privado.png'
 import './Actions.css'
 
 const Actions = () => {
