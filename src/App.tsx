@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from "./components/NavBar"
-import PostsArray from './components/Home/PostsArray'
+import Home from "./components/Home"
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
 
         <NavBar />
 
-        <PostsArray />
+        <Home></Home>
 
     </div>
   )
