@@ -7,8 +7,6 @@
 }
 
 .PostUser .ProfileImage {
-    width: 32px;
-    height: 32px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -16,7 +14,6 @@
 
 .PostUser h4 {
     margin: 0;
-    font-size: 12px;
     font-weight: 600;
     color: var(--text-primary);
     overflow: hidden;
@@ -26,6 +23,33 @@
 
 .PostUser p {
     margin: 0;
-    font-size: 11px;
     color: var(--text-muted);
+}
+
+/* Variante feed — tamaño chico, como en las cards */
+.PostUser.feed .ProfileImage {
+    width: 32px;
+    height: 32px;
+}
+
+.PostUser.feed h4 {
+    font-size: 12px;
+}
+
+.PostUser.feed p {
+    font-size: 11px;
+}
+
+/* Variante modal — más grande, header del modal */
+.PostUser.modal .ProfileImage {
+    width: 48px;
+    height: 48px;
+}
+
+.PostUser.modal h4 {
+    font-size: 16px;
+}
+
+.PostUser.modal p {
+    font-size: 14px;
 }

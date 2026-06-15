@@ -1,15 +1,10 @@
-import type { User } from "../../../../../../types/User"
+import type { PostUserProps } from "../../../../../../types/PostUserProps"
 import "./PostUser.css"
 
-type PostUserProps = {
-    user: User
-    profilePicture: string
-}
-
-const PostUser = ({ user, profilePicture }: PostUserProps) => {
+const PostUser = ({ user, profilePicture, variant = "feed" }: PostUserProps) => {
 
     return (
-        <div className="PostUser">
+        <div className={`PostUser ${variant}`}>
             <img src={profilePicture} alt="Foto de perfil" className="ProfileImage" />
             <div>
                 <h4>{user.firstName}</h4>

@@ -6,9 +6,10 @@ import "./Post.css"
 type PostProps = {
     post: PostData
     onSelect: (post: PostData) => void
+    onToggleLike: (postId: string) => void
 }
 
-const Post = ({ post, onSelect }: PostProps) => {
+const Post = ({ post, onSelect, onToggleLike }: PostProps) => {
 
     return (
         <div className="Post">
@@ -17,6 +18,8 @@ const Post = ({ post, onSelect }: PostProps) => {
                 user={post.user}
                 profilePicture={post.profilePicture}
                 likes={post.likes}
+                liked={post.liked}
+                onToggleLike={() => onToggleLike(post.id)}
             />
         </div>
     )

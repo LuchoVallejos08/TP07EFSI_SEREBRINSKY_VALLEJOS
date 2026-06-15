@@ -1,5 +1,9 @@
-// types/PostData.ts
 import type { User } from "./User"
+
+export type Comment = {
+    username: string
+    text: string
+}
 
 export type PostData = {
     id: string
@@ -8,5 +12,6 @@ export type PostData = {
     image: string
     caption: string
     likes: number
-    comments: string[]
+    liked: boolean
+    comments: Comment[]
 }

@@ -3,7 +3,7 @@ import PostInfo from "./PostInfo"
 import type { PostModalProps } from "../../../../types/PostModalProps"
 import "./PostModal.css"
 
-const PostModal = ({ post, onClose }: PostModalProps) => {
+const PostModal = ({ post, onClose, onToggleLike }: PostModalProps) => {
 
     return (
         <div className="ModalOverlay" onClick={onClose}>
@@ -14,15 +14,17 @@ const PostModal = ({ post, onClose }: PostModalProps) => {
                 <div className="ModalDetails">
 
                     <div className="ModalHeader">
-                        <PostUser user={post.user} profilePicture={post.profilePicture} />
+                        <PostUser user={post.user} profilePicture={post.profilePicture} variant="modal" />
                         <button className="CloseButton" onClick={onClose}>✕</button>
                     </div>
 
                     <PostInfo
                         caption={post.caption}
                         likes={post.likes}
+                        liked={post.liked}
                         comments={post.comments}
                         user={post.user}
+                        onToggleLike={() => onToggleLike(post.id)}
                     />
 
                 </div>
