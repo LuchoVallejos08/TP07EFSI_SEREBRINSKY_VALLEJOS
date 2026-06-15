@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
+import axios from "axios"
 import Story from "./Story"
+import "./StoriesArray.css"
 
 const API_KEY = "live_D2QAMddCywb22GzCJdPxMeRTutHHBbKr6qMkDHZQt1lH1TmSd6Kc5ZQHNTz0MYDp"
-const LIMIT = 7
+const LIMIT = 30
 
 type StoryData = {
     id: string
@@ -11,24 +13,20 @@ type StoryData = {
 }
 
 const StoriesArray = () => {
-    const [stories, setStories]   = useState<StoryData[]>([])
-    const [loading, setLoading]   = useState<boolean>(true)
-    const [error, setError]       = useState<string | null>(null)
+    const [stories, setStories] = useState<StoryData[]>([])
+    const [loading, setLoading] = useState<boolean>(true)
+    const [error, setError]     = useState<string | null>(null)
 
     useEffect(() => {
         const fetchStories = async () => {
             try {
                 const [usersRes, catsRes] = await Promise.all([
-                    fetch(`https://dummyjson.com/users?limit=${LIMIT}`),
-                    fetch(`https://api.thecatapi.com/v1/images/search?limit=${LIMIT}`, {
-                        headers: { "x-api-key": API_KEY }
-                    })
+                    axios.get(`https://dummyjson.com/users?limit=${LIMIT}`),
+                    axios.get(`https://api.thecatapi.com/v1/images/search?limit=${LIMIT}&api_key=${API_KEY}`)
                 ])
 
-                if (!usersRes.ok || !catsRes.ok) throw new Error("Error al obtener los datos")
-
-                const usersData = await usersRes.json()
-                const catsData  = await catsRes.json()
+                const usersData = usersRes.data
+                const catsData  = catsRes.data
 
                 const combined: StoryData[] = usersData.users.map((user: any, index: number) => ({
                     id:       user.id.toString(),

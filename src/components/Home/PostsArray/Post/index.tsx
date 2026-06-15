@@ -1,21 +1,24 @@
-// Post/Post.tsx — ya no fetchea, solo distribuye
 import PostPicture from "./PostPicture"
-import PostHeader from "./PostHeader"
 import PostFooter from "./PostFooter"
-import type { CatPost } from "../../../../types/CatPost"
+import type { PostData } from "../../../../types/PostData"
+import "./Post.css"
 
 type PostProps = {
-    post: CatPost
+    post: PostData
+    onSelect: (post: PostData) => void
 }
 
-const Post = ({ post }: PostProps) => {
+const Post = ({ post, onSelect }: PostProps) => {
 
     return (
         <div className="Post">
-            <PostHeader />
-            <PostPicture url={post.url} />
-            <PostFooter breed={post.breeds[0]} />        
-            </div>
+            <PostPicture image={post.image} onClick={() => onSelect(post)} />
+            <PostFooter
+                user={post.user}
+                profilePicture={post.profilePicture}
+                likes={post.likes}
+            />
+        </div>
     )
 }
 

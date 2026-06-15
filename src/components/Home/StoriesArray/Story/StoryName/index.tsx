@@ -1,5 +1,6 @@
 // StoryName/StoryName.tsx
 import type { StoryNameProps } from "../../../../../types/StoryNameProps";
+import "./StoryName.css"
 
 const StoryName = ({ username }: StoryNameProps) => {
 

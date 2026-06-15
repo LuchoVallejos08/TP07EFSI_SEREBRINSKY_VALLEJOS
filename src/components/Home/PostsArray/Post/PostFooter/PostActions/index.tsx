@@ -1,20 +1,23 @@
-import { useState } from "react";
+// PostActions.tsx
+import { useState } from "react"
+import type { PostActionsProps } from "../../../../../../types/PostActionsProps"
 
-import like from "../../../../../../assets/LikeDado.png";
-import noLike from "../../../../../../assets/LikeNoDado.png";
-import comentario from "../../../../../../assets/Comentario.png";
-import privado from "../../../../../../assets/Privado.png";
+import like from "../../../../../../assets/LikeDado.png"
+import noLike from "../../../../../../assets/LikeNoDado.png"
+import comentario from "../../../../../../assets/Comentario.png"
+import privado from "../../../../../../assets/Privado.png"
+import "./PostActions.css"
 
-const PostActions = () => {
+const PostActions = ({ likes }: PostActionsProps) => {
 
-    const [liked, setLiked] = useState(false);
+    const [liked, setLiked] = useState(false)
 
     const handleLike = () => {
-        setLiked(!liked);
-    };
+        setLiked(!liked)
+    }
 
     return (
-        <div>
+        <div className="PostActions">
             <button onClick={handleLike}>
                 <img src={liked ? like : noLike} alt="Like" />
             </button>
@@ -26,8 +29,10 @@ const PostActions = () => {
             <button>
                 <img src={privado} alt="Enviar mensaje" />
             </button>
-        </div>
-    );
-};
 
-export default PostActions;
+            <p className="LikesCount">{likes.toLocaleString()} likes</p>
+        </div>
+    )
+}
+
+export default PostActions

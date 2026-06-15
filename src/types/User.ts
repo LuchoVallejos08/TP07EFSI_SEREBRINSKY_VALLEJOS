@@ -1,4 +1,9 @@
+// types/User.ts
 export type User = {
-    firstName: string;
-    username: string;
+    id: number
+    firstName: string
+    lastName: string
+    username: string
+    email: string
+    image: string
 }

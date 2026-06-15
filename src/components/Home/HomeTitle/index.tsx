@@ -1,4 +1,5 @@
 import type { SectionTitleProps } from "../../../types/SectionTitleProps";
+import "./HomeTitle.css"
 
 const HomeTitle = ({ text }: SectionTitleProps) => {
     return (

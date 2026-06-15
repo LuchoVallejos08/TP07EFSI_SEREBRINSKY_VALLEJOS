@@ -1,0 +1,14 @@
+/* StoriesArray.css */
+.StoriesArray {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    max-width: 100%;     /* no crece más que su contenedor */
+}
+
+.StoriesArray::-webkit-scrollbar {
+    display: none;
+}

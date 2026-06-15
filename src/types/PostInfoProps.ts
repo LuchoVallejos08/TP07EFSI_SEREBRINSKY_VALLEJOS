@@ -1,5 +1,9 @@
-import type { Breed } from "./Breed"
+// types/PostInfoProps.ts
+import type { User } from "./User"
 
 export type PostInfoProps = {
-    breed: Breed
+    caption: string
+    likes: number
+    comments: string[]
+    user: User
 }

@@ -1,0 +1,29 @@
+.SearchBar {
+    flex: 1;
+    max-width: 420px;
+    margin: 0 32px;
+}
+
+.SearchBar form {
+    width: 100%;
+}
+
+.SearchBar input {
+    width: 100%;
+    padding: 10px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.SearchBar input::placeholder {
+    color: var(--text-muted);
+}
+
+.SearchBar input:focus {
+    border-color: var(--accent);
+}

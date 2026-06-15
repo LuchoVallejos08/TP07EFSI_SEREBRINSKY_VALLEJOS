@@ -1,16 +1,18 @@
-import PostInfo from "./PostInfo";
-import PostActions from "./PostActions";
+import PostUser from "./PostUser"
+import PostActions from "./PostActions"
+import type { PostFooterProps } from "../../../../../types/PostFooterProps"
+import "./PostFooter.css"
 
-import type { PostInfoProps } from "../../../../../types/PostInfoProps";
 
-const PostFooter = ({ breed }: PostInfoProps) => {
+
+const PostFooter = ({ user, profilePicture, likes }: PostFooterProps) => {
 
     return (
         <div className="PostFooter">
-            <PostActions />
-            <PostInfo breed={breed} />
+            <PostUser user={user} profilePicture={profilePicture} />
+            <PostActions likes={likes} />
         </div>
-    );
-};
+    )
+}
 
-export default PostFooter;
+export default PostFooter

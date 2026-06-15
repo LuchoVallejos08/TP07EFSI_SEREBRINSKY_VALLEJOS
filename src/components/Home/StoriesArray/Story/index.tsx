@@ -1,6 +1,7 @@
 // Story/Story.tsx
 import StoryPicture from "./StoryPicture"
 import StoryName from "./StoryName"
+import "./Story.css"
 
 type StoryProps = {
     username: string

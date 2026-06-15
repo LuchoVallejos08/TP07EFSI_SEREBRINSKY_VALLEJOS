@@ -1,5 +1,6 @@
 // StoryPicture/StoryPicture.tsx
 import type { StoryPictureProps } from "../../../../../types/StoryPictureProps";
+import "./StoryPicture.css"
 
 const StoryPicture = ({ avatar, username }: StoryPictureProps) => {
 

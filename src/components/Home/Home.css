@@ -1,0 +1,12 @@
+/* Home.css */
+/* Home.css */
+.Home {
+    flex: 1;
+    padding: 24px;
+    min-width: 0;        /* clave para que el scroll no rompa el layout */
+    overflow-x: hidden;  /* por si acaso, contiene cualquier desborde */
+}
+
+.Home > div {
+    margin-bottom: 32px;
+}

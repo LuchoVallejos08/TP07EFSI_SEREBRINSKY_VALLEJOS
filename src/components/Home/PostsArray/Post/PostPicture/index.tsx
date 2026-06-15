@@ -1,10 +1,12 @@
+// PostPicture.tsx
 import type { PostPictureProps } from "../../../../../types/PostPictureProps"
+import "./PostPicture.css"
 
-const PostPicture = ({ url }: PostPictureProps) => {
+const PostPicture = ({ image, onClick }: PostPictureProps) => {
 
     return (
-        <div className="PostPicture">
-            <img src={url} alt="cat post" />
+        <div className="PostPicture" onClick={onClick}>
+            <img src={image} alt="cat post" />
         </div>
     )
 }

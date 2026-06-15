@@ -1,5 +1,6 @@
-import type { CatPost } from "./CatPost"
+import type { PostData } from "./PostData"
 
 export type PostProps = {
-    post: CatPost
+    post: PostData
+    onSelect: (post: PostData) => void
 }

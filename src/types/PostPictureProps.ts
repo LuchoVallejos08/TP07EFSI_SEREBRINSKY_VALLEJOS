@@ -1,3 +1,4 @@
 export type PostPictureProps = {
-    url: string
+    image: string
+    onClick: () => void
 }
