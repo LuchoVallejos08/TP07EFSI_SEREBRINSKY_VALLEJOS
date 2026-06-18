@@ -2,8 +2,9 @@ import HomeTitle from "./HomeTitle";
 import StoriesArray from "./StoriesArray";
 import PostsArray from "./PostsArray";
 import "./Home.css";
+import type { HomeProps } from "../../types/HomeProps"
 
-const Home = () => {
+const Home = ({ posts, setPosts }: HomeProps) => {
     return (
         <div className="Home">
             <div>
@@ -13,7 +14,7 @@ const Home = () => {
 
             <div>
                 <HomeTitle text="Trending" />
-                <PostsArray />
+                <PostsArray posts={posts} setPosts={setPosts}/>
             </div>
         </div>
     );

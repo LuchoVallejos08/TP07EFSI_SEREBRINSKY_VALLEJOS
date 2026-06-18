@@ -36,8 +36,7 @@ const COMMENT_TEXTS = [
     "¡Es un amor! ❤️"
 ]
 
-const PostsArray = () => {
-    const [posts, setPosts]     = useState<PostData[]>([])
+const PostsArray = ({posts, setPosts}) => {
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError]     = useState<string | null>(null)
     const [selectedPost, setSelectedPost] = useState<PostData | null>(null)

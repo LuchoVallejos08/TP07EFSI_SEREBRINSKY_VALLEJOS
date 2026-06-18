@@ -1,18 +1,13 @@
-import home from '../../assets/material-symbols--home.png'
-import explore from '../../assets/material-symbols--explore.png'
-import reels from '../../assets/gridicons--video.png'
-import igtv from '../../assets/ic--round-tv.png'
-import notification from '../../assets/tdesign--notification-filled.png'
+import AccountInfo from "./AccountInfo"
+import Menu from "./Menu"
 
-const Menu = () => {
+import "./SideBar.css"
 
-    return(
-        <div>
-            <article>
-                <img src="" alt="" />
-                <p></p>
-            </article>
-            
-        </div>
+export default function SideBar() {
+    return (
+        <aside className="SideBar">
+            <AccountInfo />
+            <Menu />
+        </aside>
     )
 }
