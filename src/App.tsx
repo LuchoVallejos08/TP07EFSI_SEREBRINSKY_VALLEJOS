@@ -9,14 +9,20 @@ import Account from "./components/Account"
 
 import type { PostData } from "./types/PostData"
 
-function App() {
+import "./App.css"
 
+
+function App() {
     const [posts, setPosts] = useState<PostData[]>([])
-    console.log("APP:", posts.length)
+
     return (
         <div className="App">
-            <NavBar />
+    <NavBar />
 
+    <main className="MainLayout">
+        <SideBar />
+
+        <div className="PageContent">
             <Routes>
                 <Route
                     path="/"
@@ -28,10 +34,10 @@ function App() {
                     element={<Account posts={posts} />}
                 />
             </Routes>
-
-            <SideBar />
         </div>
+    </main>
+</div>
     )
 }
 
-export default App
+export default App;

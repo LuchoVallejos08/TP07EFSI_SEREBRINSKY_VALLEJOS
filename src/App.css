@@ -1,5 +1,15 @@
-/* App.css */
+/*App.css*/
 .MainLayout {
     display: flex;
-    align-items: flex-start;
+    width: 100%;
+}
+
+.PageContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.SideBar {
+    width: 280px;
+    min-width: 280px;
 }
