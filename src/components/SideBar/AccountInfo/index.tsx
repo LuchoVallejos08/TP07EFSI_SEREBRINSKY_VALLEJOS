@@ -1,5 +1,6 @@
 import "./AccountInfo.css"
 import { useNavigate } from "react-router-dom"
+import logoPerfil from '../../../assets/mujer.jfif'
 
 export default function AccountInfo() {
     const navigate = useNavigate()
@@ -8,26 +9,28 @@ export default function AccountInfo() {
         
     <div onClick={() => navigate("/profile")}>
         <div className="AccountInfo">
-            <img
-                src="https://i.pravatar.cc/200"
-                alt="profile"
-                className="AccountInfo__image"
-            />
+    <img
+        src={logoPerfil}
+        alt="profile"
+        className="AccountInfo__image"
+    />
 
-            <h2>Nao Sere</h2>
+    <h2>Nao Sere</h2>
 
-            <p>@nao_sere</p>
+    <p>@nao_sere</p>
 
-            <div className="AccountInfo__stats">
-                <div>
-                    <strong>121K</strong>
-                </div>
-
-                <div>
-                    <strong>900K</strong>
-                </div>
-            </div>
+    <div className="AccountInfo__stats">
+        <div>
+            <strong>121K</strong>
+            <span>Followers</span>
         </div>
+
+        <div>
+            <strong>900K</strong>
+            <span>Likes</span>
+        </div>
+    </div>
+</div>
         </div>
     )
 }

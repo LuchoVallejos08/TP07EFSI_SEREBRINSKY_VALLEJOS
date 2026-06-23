@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 
 import "./Menu.css"
 
 export default function Menu() {
     const navigate = useNavigate()
+    const location = useLocation()
 
     return (
         <nav className="Menu">
 
             <button
-                className="MenuItem"
+                className={`MenuItem ${location.pathname === "/" ? "active" : ""}`}
                 onClick={() => navigate("/")}
             >
-
                 <span>Home</span>
             </button>
 
@@ -33,7 +33,7 @@ export default function Menu() {
             </button>
 
             <button
-                className="MenuItem"
+                className={`MenuItem ${location.pathname === "/profile" ? "active" : ""}`}
                 onClick={() => navigate("/profile")}
             >
                 <span>Profile</span>

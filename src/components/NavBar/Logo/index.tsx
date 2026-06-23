@@ -1,4 +1,4 @@
-import logoImagen from '../../../assets/logos--instagram.png'
+import logoImagen from '../../../assets/logos--instagram1.png'
 import './Logo.css';
 
 const Logo = () => {

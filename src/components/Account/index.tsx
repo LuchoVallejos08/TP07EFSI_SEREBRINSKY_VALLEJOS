@@ -1,18 +1,27 @@
 import type { AccountProps } from "../../types/AccountProps"
 import "./Account.css"
+import logoPerfil from '../../assets/mujer.jfif'
+
+import { useState } from "react"
+import PostModal from "../Home/PostsArray/PostModal"
+import type { PostData } from "../../types/PostData"
 
 const Account = ({ posts }: AccountProps) => {
 
-    const profilePosts = posts.slice(0, 6)
+    
+    const profilePosts = posts.slice(0, 9)
     console.log(posts)
     console.log("ACCOUNT:", posts.length)
+
+    const [selectedPost, setSelectedPost] = useState<PostData | null>(null)
+
     return (
         <div className="Account">
 
             <div className="AccountHeader">
 
                 <img
-                    src={posts[0]?.profilePicture}
+                    src={logoPerfil}
                     alt="Profile"
                     className="ProfilePicture"
                 />
@@ -70,15 +79,24 @@ const Account = ({ posts }: AccountProps) => {
             <div className="PostsGrid">
 
                 {profilePosts.map((post) => (
-                    <img
-                        key={post.id}
-                        src={post.image}
-                        alt={post.caption}
-                        className="PostImage"
-                    />
+                <img
+                    key={post.id}
+                    src={post.image}
+                    alt={post.caption}
+                    className="PostImage"
+                    onClick={() => setSelectedPost(post)}
+                />
                 ))}
 
             </div>
+
+            {selectedPost && (
+    <PostModal
+        post={selectedPost}
+        onClose={() => setSelectedPost(null)}
+        onToggleLike={() => {}}
+    />
+)}
 
         </div>
     )

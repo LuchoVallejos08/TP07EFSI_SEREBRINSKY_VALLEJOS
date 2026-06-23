@@ -17,7 +17,26 @@
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff4fd8;
+
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    padding: 3px;
+
+    background: linear-gradient(
+        45deg,
+        #f58529,
+        #feda77,
+        #dd2a7b,
+        #8134af,
+        #515bd4
+    );
+
+    margin-bottom: 16px;
 }
 
 .AccountInfo {
@@ -86,4 +105,8 @@ hr {
 
 .PostImage:hover {
     opacity: 0.8;
+}
+
+.PostImage {
+    cursor: pointer;
 }
