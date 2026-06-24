@@ -26,7 +26,7 @@ const Account = ({ posts }: AccountProps) => {
                     className="ProfilePicture"
                 />
 
-                <div className="AccountInfo">
+                <div className="ProfileInfo">
 
                     <div className="TopRow">
                         <h2>@nao_sere</h2>
@@ -58,16 +58,10 @@ const Account = ({ posts }: AccountProps) => {
                         <h4>Nao Sere</h4>
 
                         <p>
-                            📸 Fotografía
+                            Amo EFSI ❤️❤️❤️
                         </p>
 
-                        <p>
-                            🌎 Buenos Aires
-                        </p>
-
-                        <p>
-                            ✨ Capturando momentos desde React
-                        </p>
+                     
                     </div>
 
                 </div>

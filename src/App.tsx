@@ -14,6 +14,7 @@ import "./App.css"
 
 function App() {
     const [posts, setPosts] = useState<PostData[]>([])
+    
 
     return (
         <div className="App">

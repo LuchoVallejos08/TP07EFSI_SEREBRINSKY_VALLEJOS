@@ -5,10 +5,11 @@
     padding: 30px;
     color: white;
 }
-
 .AccountHeader {
     display: flex;
-    gap: 60px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
     margin-bottom: 40px;
 }
 
@@ -39,8 +40,11 @@
     margin-bottom: 16px;
 }
 
-.AccountInfo {
-    flex: 1;
+.ProfileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
 }
 
 .TopRow {

@@ -55,7 +55,6 @@ const PostsArray = ({posts, setPosts}) => {
 
                 const combined: PostData[] = allUsers.map((user: any, index: number) => {
 
-                    // Elegimos hasta 10 usuarios distintos al autor para comentar
                     const commenters = allUsers.filter((u: any) => u.id !== user.id)
 
                     const comments = COMMENT_TEXTS.map((text, i) => ({
