@@ -46,7 +46,7 @@ const Account = ({ posts }: AccountProps) => {
                         </span>
 
                         <span>
-                            <strong>121k</strong> seguidores
+                            <strong>12M</strong> seguidores
                         </span>
 
                         <span>
